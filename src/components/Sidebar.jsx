@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     FaTh,
-    FaBars,
     FaUserAlt,
     FaRegChartBar,
     FaCommentAlt,
@@ -13,8 +12,7 @@ import { NavLink } from 'react-router-dom';
 import dashboardImg from '../images/silver-settings-icon-free-png.webp'
 
 const Sidebar = ({children}) => {
-    const[isOpen ,setIsOpen] = useState(false);
-    const toggle = () => setIsOpen (!isOpen);
+   
     const menuItem=[
         {
             path:"/",
@@ -52,8 +50,8 @@ const Sidebar = ({children}) => {
            <div style={{}} className="sidebar">
                <div className="top_section">
                <img src={dashboardImg} alt='dashboard' width='20%' /><h1 style={{ marginLeft:'8px'}} className="logo"> Dashboard</h1>
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
-                       {/* <FaBars onClick={toggle}/> */}
+                   <div className="bars">
+                    
                    </div>
                </div>
                {
